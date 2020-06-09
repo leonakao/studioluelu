@@ -4,6 +4,12 @@
     "description": "My magnificent Nuxt.js project",
     "author": "Leonardo Nakao",
     "private": true,
+    "config": {
+        "nuxt": {
+          "host": "10.10.10.7",
+          "port": "3000"
+        }
+    },
     "scripts": {
         "dev": "nuxt",
         "build": "nuxt build",

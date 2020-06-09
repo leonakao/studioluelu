@@ -1,89 +1,73 @@
 <template>
-    <v-app dark>
-        <v-navigation-drawer
-            v-model="drawer"
-            :mini-variant="miniVariant"
-            :clipped="clipped"
-            fixed
-            app
-        >
-            <v-list>
-                <v-list-item
-                    v-for="(item, i) in items"
-                    :key="i"
-                    :to="item.to"
-                    router
-                    exact
-                >
-                    <v-list-item-action>
-                        <v-icon>{{ item.icon }}</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title v-text="item.title" />
-                    </v-list-item-content>
-                </v-list-item>
-            </v-list>
-        </v-navigation-drawer>
+    <v-app>
         <v-app-bar
-            :clipped-left="clipped"
-            fixed
             app
+            color="white"
+            height="100"
         >
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-            <v-btn
-                icon
-                @click.stop="miniVariant = !miniVariant"
+            <v-avatar
+                class="mr-3"
+                color="grey lighten-5"
+                size="70"
+                @click="$vuetify.goTo('main')"
             >
-                <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-            </v-btn>
-            <v-btn
-                icon
-                @click.stop="clipped = !clipped"
-            >
-                <v-icon>mdi-application</v-icon>
-            </v-btn>
-            <v-btn
-                icon
-                @click.stop="fixed = !fixed"
-            >
-                <v-icon>mdi-minus</v-icon>
-            </v-btn>
-            <v-toolbar-title v-text="title" />
+                <v-img
+                    contain
+                    max-height="70%"
+                    src="/logo.png"
+                />
+            </v-avatar>
             <v-spacer />
-            <v-btn
-                icon
-                @click.stop="rightDrawer = !rightDrawer"
-            >
-                <v-icon>mdi-menu</v-icon>
-            </v-btn>
+            <v-toolbar-items>
+                <v-divider vertical />
+                <v-btn
+                    text
+                    color="black"
+                    @click="$vuetify.goTo('#home')"
+                >
+                    Inicio
+                </v-btn>
+
+                <v-divider vertical />
+                <v-btn
+                    text
+                    color="black"
+                    @click="$vuetify.goTo('#about')"
+                >
+                    Sobre
+                </v-btn>
+
+                <v-divider vertical />
+                <v-btn
+                    text
+                    color="black"
+                    @click="$vuetify.goTo('#features')"
+                >
+                    Produtos
+                </v-btn>
+
+                <v-divider vertical />
+                <v-btn
+                    text
+                    color="black"
+                    @click="$vuetify.goTo('#contact')"
+                >
+                    Contato
+                </v-btn>
+                <v-divider vertical />
+            </v-toolbar-items>
         </v-app-bar>
         <v-content>
-            <v-container>
-                <nuxt />
-            </v-container>
+            <nuxt />
         </v-content>
-        <v-navigation-drawer
-            v-model="rightDrawer"
-            :right="right"
-            temporary
-            fixed
-        >
-            <v-list>
-                <v-list-item @click.native="right = !right">
-                    <v-list-item-action>
-                        <v-icon light>
-                            mdi-repeat
-                        </v-icon>
-                    </v-list-item-action>
-                    <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-                </v-list-item>
-            </v-list>
-        </v-navigation-drawer>
         <v-footer
-            :fixed="fixed"
-            app
+            class="justify-center"
+            color="#292929"
+            height="100"
         >
-            <span>&copy; {{ new Date().getFullYear() }}</span>
+            <div class="title font-weight-light grey--text text--lighten-1 text-center">
+                &copy; {{ (new Date()).getFullYear() }} — STUDIO LU & LU
+            </div>
         </v-footer>
     </v-app>
 </template>

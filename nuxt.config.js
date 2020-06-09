@@ -6,7 +6,7 @@ export default {
   ** Headers of the page
   */
     head: {
-        titleTemplate: "%s - " + process.env.npm_package_name,
+        titleTemplate: "Studio Lu & Lu",
         title: process.env.npm_package_name || "",
         meta: [
             { charset: "utf-8" },
@@ -61,6 +61,9 @@ export default {
         theme: {
             dark: false,
             themes: {
+                light: {
+                    primary: "#A70E0D"
+                },
                 dark: {
                     primary: colors.blue.darken2,
                     accent: colors.grey.darken3,
