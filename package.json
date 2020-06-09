@@ -6,8 +6,8 @@
     "private": true,
     "config": {
         "nuxt": {
-          "host": "10.10.10.7",
-          "port": "3000"
+            "host": "10.10.10.7",
+            "port": "3000"
         }
     },
     "scripts": {
@@ -22,9 +22,10 @@
         "@nuxtjs/axios": "^5.3.6"
     },
     "devDependencies": {
-        "@nuxtjs/vuetify": "^1.0.0",
+        "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/eslint-config": "^2.0.0",
         "@nuxtjs/eslint-module": "^1.0.0",
+        "@nuxtjs/vuetify": "^1.0.0",
         "babel-eslint": "^10.0.1",
         "eslint": "^6.1.0",
         "eslint-plugin-nuxt": ">=0.4.2"
