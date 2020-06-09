@@ -5,18 +5,21 @@
             color="white"
             height="100"
         >
-            <v-avatar
-                class="mr-3"
-                color="grey lighten-5"
-                size="70"
+            <a
                 @click="$vuetify.goTo('main')"
             >
-                <v-img
-                    contain
-                    max-height="70%"
-                    src="/logo.png"
-                />
-            </v-avatar>
+                <v-avatar
+                    class="mr-3"
+                    color="grey lighten-5"
+                    size="70"
+                >
+                    <v-img
+                        contain
+                        max-height="70%"
+                        src="/logo.png"
+                    />
+                </v-avatar>
+            </a>
             <v-spacer />
             <v-toolbar-items>
                 <v-divider vertical />
