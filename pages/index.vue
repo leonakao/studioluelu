@@ -148,7 +148,8 @@
 
                 <v-row>
                     <v-col
-                        cols="4"
+                        cols="12"
+                        md="4"
                     >
                         <v-card
                             height="100%"
@@ -183,8 +184,10 @@
                             </v-container>
                             <v-list>
                                 <v-list-item
-                                    v-for="({ title, icon }) in contacts"
+                                    v-for="({ title, icon, link }) in contacts"
                                     :key="title"
+                                    :href="link || ''"
+                                    target="blank"
                                 >
                                     <v-list-item-icon>
                                         <v-icon color="black" x-large>
@@ -200,7 +203,8 @@
                         </v-card>
                     </v-col>
                     <v-col
-                        cols="8"
+                        cols="12"
+                        md="8"
                     >
                         <v-card
                             class="mx-auto"
@@ -243,7 +247,8 @@ export default {
             contacts: [
                 {
                     icon: "mdi mdi-whatsapp",
-                    title: "(14) 98102-8845"
+                    title: "(14) 98182-7055",
+                    link: "https://api.whatsapp.com/send?phone=5514981827055"
                 },
                 {
                     icon: "mdi mdi-phone",
@@ -251,11 +256,13 @@ export default {
                 },
                 {
                     icon: "mdi mdi-instagram",
-                    title: "studioluelu"
+                    title: "studioluelu",
+                    link: "https://www.instagram.com/studioluelu/"
                 },
                 {
                     icon: "mdi mdi-facebook",
-                    title: "Studio Lu & Lu"
+                    title: "Studio Lu & Lu",
+                    link: "https://www.facebook.com/studioluelu/"
                 },
                 {
                     icon: "mdi mdi-map-marker",
