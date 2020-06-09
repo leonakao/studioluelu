@@ -4,7 +4,7 @@
             <v-row no-gutters>
                 <v-img
                     :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-                    src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                    src="/fachada.jpg"
                 >
                     <v-theme-provider dark>
                         <v-container fill-height>
@@ -210,9 +210,7 @@
                             class="mx-auto"
                             flat
                         >
-                            <v-img
-                                src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                            />
+                            <div id="map" />
                         </v-card>
                     </v-col>
                 </v-row>
