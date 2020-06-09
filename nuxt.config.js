@@ -2,6 +2,10 @@ import colors from "vuetify/es5/util/colors";
 
 export default {
     mode: "universal",
+    server: {
+        port: 3000, // default: 3000
+        host: "10.10.10.7" // default: localhost
+    },
     /*
   ** Headers of the page
   */
@@ -30,6 +34,7 @@ export default {
   ** Plugins to load before mounting the App
   */
     plugins: [
+        "@/plugins/google-maps"
     ],
     /*
   ** Nuxt.js dev-modules
@@ -44,7 +49,8 @@ export default {
   */
     modules: [
     // Doc: https://axios.nuxtjs.org/usage
-        "@nuxtjs/axios"
+        "@nuxtjs/axios",
+        "@nuxtjs/dotenv"
     ],
     /*
   ** Axios module configuration
