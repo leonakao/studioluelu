@@ -189,13 +189,13 @@
                             </v-container>
                             <v-list>
                                 <v-list-item
-                                    v-for="({ title, icon, link }) in contacts"
+                                    v-for="({ title, icon, link, color }) in contacts"
                                     :key="title"
                                     :href="link || ''"
                                     target="blank"
                                 >
                                     <v-list-item-icon>
-                                        <v-icon color="black" x-large>
+                                        <v-icon :color="color || 'black'" x-large>
                                             {{ icon }}
                                         </v-icon>
                                     </v-list-item-icon>
@@ -249,6 +249,7 @@ export default {
             contacts: [
                 {
                     icon: "mdi mdi-whatsapp",
+                    color: "#31E055",
                     title: "(14) 98182-7055",
                     link: "https://api.whatsapp.com/send?phone=5514981827055"
                 },
@@ -258,16 +259,19 @@ export default {
                 },
                 {
                     icon: "mdi mdi-instagram",
+                    color: "#C41BA8",
                     title: "studioluelu",
                     link: "https://www.instagram.com/studioluelu/"
                 },
                 {
                     icon: "mdi mdi-facebook",
+                    color: "#4267B2",
                     title: "Studio Lu & Lu",
                     link: "https://www.facebook.com/studioluelu/"
                 },
                 {
                     icon: "mdi mdi-map-marker",
+                    color: "#E84135",
                     title: "Alameda das Crisandálias 5-7",
                     link: "https://goo.gl/maps/G3YtLd6EXxLjM8F97"
                 }
