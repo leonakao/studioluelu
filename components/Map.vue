@@ -13,11 +13,10 @@
 export default {
     data () {
         return {
-            center: { lat: -3.350235, lng: 111.995865 },
+            center: { lat: -22.302563, lng: -49.067491 },
             mapTypeId: "terrain",
             markers: [
-                { position: { lat: -0.48585, lng: 117.1466 } },
-                { position: { lat: -6.9127778, lng: 107.6205556 } }
+                { position: { lat: -22.302563, lng: -49.067491 } }
             ]
         };
     }
@@ -26,7 +25,8 @@ export default {
 
 <style scoped>
 .vue-map-container {
-    height: 450px;
+    height: 100%;
+    min-height: 450px;
     max-width: 992px;
     width: 100%;
 }

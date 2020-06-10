@@ -196,7 +196,7 @@
                                     </v-list-item-icon>
 
                                     <v-list-item-content>
-                                        <v-list-item-title class="d-none d-sm-flex text-left title" v-text="title" />
+                                        <v-list-item-title class="text-left title" v-text="title" />
                                     </v-list-item-content>
                                 </v-list-item>
                             </v-list>
@@ -206,12 +206,7 @@
                         cols="12"
                         md="8"
                     >
-                        <v-card
-                            class="mx-auto"
-                            flat
-                        >
-                            <div id="map" />
-                        </v-card>
+                        <Map />
                     </v-col>
                 </v-row>
             </v-container>
@@ -222,9 +217,10 @@
 </template>
 
 <script>
+import Map from "@/components/Map.vue";
 export default {
     components: {
-
+        Map
     },
     data () {
         return {
