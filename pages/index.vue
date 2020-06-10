@@ -229,15 +229,15 @@ export default {
         return {
             features: [
                 {
-                    img: "https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80-outline",
+                    img: "https://images.unsplash.com/photo-1581674210501-c760093514e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                     title: "Cabelo"
                 },
                 {
-                    img: "https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-                    title: "Pele"
+                    img: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+                    title: "Estética"
                 },
                 {
-                    img: "https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
+                    img: "https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                     title: "Unhas"
                 }
             ],
@@ -263,7 +263,8 @@ export default {
                 },
                 {
                     icon: "mdi mdi-map-marker",
-                    title: "Alameda das Crisandálias 5-7"
+                    title: "Alameda das Crisandálias 5-7",
+                    link: "https://goo.gl/maps/G3YtLd6EXxLjM8F97"
                 }
             ]
         };
