@@ -28,7 +28,7 @@
                     :key="i"
                     text
                     color="black"
-                    @click="$vuetify.goTo('#about')"
+                    @click="action()"
                 >
                     {{ text }}
                 </v-btn>
