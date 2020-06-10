@@ -206,7 +206,14 @@
                         cols="12"
                         md="8"
                     >
-                        <Map />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.351789025408!2d-49.06968258441239!3d-22.30253152219643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf67c4bc290e4f%3A0xbc41585285753f6b!2sSTUDIO%20LU%20%26%20LU!5e0!3m2!1spt-BR!2sbr!4v1591830277444!5m2!1spt-BR!2sbr"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen="true"
+                            tabindex="0"
+                        />
                     </v-col>
                 </v-row>
             </v-container>
@@ -217,11 +224,7 @@
 </template>
 
 <script>
-import Map from "@/components/Map.vue";
 export default {
-    components: {
-        Map
-    },
     data () {
         return {
             features: [
