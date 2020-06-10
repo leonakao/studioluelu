@@ -74,7 +74,12 @@
                     class="mx-auto title font-weight-light mb-8"
                     max-width="720"
                 >
-                    Vuetify is the #1 component library for Vue.js and has been in active development since 2016. The goal of the project is to provide users with everything that is needed to build rich and engaging web applications using the Material Design specification. It accomplishes that with a consistent update cycle, Long-term Support (LTS) for previous versions, responsive community engagement, a vast ecosystem of resources and a dedication to quality components.
+                    <p>
+                        Somos o Studio Lu & Lu, um espaço destinado a você, a sua vaidade e ao prazer de sentir-se bonita todos os dias!
+                    </p>
+                    <p>
+                        Oferecemos tratamento facial de Limpeza de Pele, que tem como objetivo remover impurezas e pode ser feito em todos tipos de pele. E todo mundo sabe o poder de um bom corte de cabelo. Por mais que a gente adore manter os fios bem longos, chega uma hora em que é inevitável: só mesmo diminuindo o comprimento, conseguimos ter um cabelo com saúde e personalidade.
+                    </p>
                 </v-responsive>
             </v-container>
 
