@@ -1,5 +1,5 @@
 <template>
-    <gmap-map :center="center" :map-type-id="mapTypeId" :zoom="5">
+    <gmap-map :center="center" :map-type-id="mapTypeId" :zoom="zoom">
         <gmap-marker
             v-for="(item, index) in markers"
             :key="index"
@@ -17,7 +17,8 @@ export default {
             mapTypeId: "terrain",
             markers: [
                 { position: { lat: -22.302563, lng: -49.067491 } }
-            ]
+            ],
+            zoom: 15
         };
     }
 };

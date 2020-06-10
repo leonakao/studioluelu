@@ -1,6 +1,7 @@
 <template>
-    <v-app>
+    <v-app v-cloak>
         <v-app-bar
+            v-model="appBar"
             app
             color="white"
             height="100"
@@ -22,44 +23,48 @@
             </a>
             <v-spacer />
             <v-toolbar-items>
-                <v-divider vertical />
                 <v-btn
-                    text
-                    color="black"
-                    @click="$vuetify.goTo('#home')"
-                >
-                    Inicio
-                </v-btn>
-
-                <v-divider vertical />
-                <v-btn
+                    v-for="({text, action}, i) in options"
+                    :key="i"
                     text
                     color="black"
                     @click="$vuetify.goTo('#about')"
                 >
-                    Sobre
+                    {{ text }}
                 </v-btn>
-
-                <v-divider vertical />
-                <v-btn
-                    text
-                    color="black"
-                    @click="$vuetify.goTo('#features')"
-                >
-                    Produtos
-                </v-btn>
-
-                <v-divider vertical />
-                <v-btn
-                    text
-                    color="black"
-                    @click="$vuetify.goTo('#contact')"
-                >
-                    Contato
-                </v-btn>
-                <v-divider vertical />
             </v-toolbar-items>
         </v-app-bar>
+        <v-navigation-drawer
+            v-model="drawer"
+            mini-variant
+            mini-variant-width="150"
+            hide-overlay
+            app
+        >
+            <v-list
+                dense
+                rounded
+                class="py-0"
+            >
+                <v-list-item class="d-flex justify-center">
+                    <v-list-item-avatar>
+                        <v-img src="/logo.png" />
+                    </v-list-item-avatar>
+                </v-list-item>
+
+                <v-divider />
+                <v-list-item
+                    v-for="({text, action}, i) in options"
+                    :key="i"
+                    link
+                    @click="action"
+                >
+                    <v-list-item-content class="text-center">
+                        <v-list-item-title>{{ text }}</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list>
+        </v-navigation-drawer>
         <v-content>
             <nuxt />
         </v-content>
@@ -81,24 +86,32 @@ export default {
         return {
             clipped: false,
             drawer: false,
+            appBar: false,
             fixed: false,
-            items: [
+            options: [
                 {
-                    icon: "mdi-apps",
-                    title: "Welcome",
-                    to: "/"
+                    action: () => { this.$vuetify.goTo("#home"); },
+                    text: "Início"
                 },
                 {
-                    icon: "mdi-chart-bubble",
-                    title: "Inspire",
-                    to: "/inspire"
+                    action: () => { this.$vuetify.goTo("#about"); },
+                    text: "Sobre"
+                },
+                {
+                    action: () => { this.$vuetify.goTo("#features"); },
+                    text: "Serviços"
+                },
+                {
+                    action: () => { this.$vuetify.goTo("#contact"); },
+                    text: "Contato"
                 }
             ],
-            miniVariant: false,
-            right: true,
-            rightDrawer: false,
-            title: "Vuetify.js"
+            title: "Studio Lu & Lu"
         };
+    },
+    created () {
+        this.appBar = this.$vuetify.breakpoint.smAndUp;
+        this.drawer = this.appBar ? false : null;
     }
 };
 </script>
