@@ -1,0 +1,29 @@
+{
+    "name": "studioluelu",
+    "version": "1.0.0",
+    "description": "Studio Lu & Lu, um espaço destinado a você, a sua vaidade e ao prazer de sentir-se bonita todos os dias!",
+    "author": "Leonardo Nakao",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.3.6",
+        "@nuxtjs/sitemap": "^2.3.1",
+        "@nuxtjs/google-analytics": "^2.3.0",
+        "nuxt": "^2.0.0"
+    },
+    "devDependencies": {
+        "@nuxtjs/dotenv": "^1.4.1",
+        "@nuxtjs/eslint-config": "^2.0.0",
+        "@nuxtjs/eslint-module": "^1.0.0",
+        "@nuxtjs/vuetify": "^1.0.0",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^6.1.0",
+        "eslint-plugin-nuxt": ">=0.4.2"
+    }
+}
