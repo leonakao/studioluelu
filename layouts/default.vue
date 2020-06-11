@@ -1,10 +1,12 @@
 <template>
     <v-app v-cloak>
         <v-app-bar
-            v-model="appBar"
             app
             color="white"
             height="100"
+            elevate-on-scroll
+            fixed
+            :hide-on-scroll="$vuetify.breakpoint.xsOnly"
         >
             <a
                 @click="$vuetify.goTo('main')"
@@ -22,7 +24,7 @@
                 </v-avatar>
             </a>
             <v-spacer />
-            <v-toolbar-items>
+            <v-toolbar-items v-if="$vuetify.breakpoint.smAndUp">
                 <v-btn
                     v-for="({text, action}, i) in options"
                     :key="i"
@@ -33,12 +35,13 @@
                     {{ text }}
                 </v-btn>
             </v-toolbar-items>
+            <v-app-bar-nav-icon v-else @click="drawer = true" />
         </v-app-bar>
         <v-navigation-drawer
             v-model="drawer"
+            right
             mini-variant
             mini-variant-width="150"
-            hide-overlay
             app
         >
             <v-list
@@ -109,8 +112,7 @@ export default {
         };
     },
     created () {
-        this.appBar = this.$vuetify.breakpoint.smAndUp;
-        this.drawer = this.appBar ? false : null;
+        this.drawer = this.$vuetify.breakpoint.xsOnly ? null : false;
     }
 };
 </script>
