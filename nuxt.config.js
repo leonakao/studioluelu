@@ -62,6 +62,7 @@ export default {
   ** See https://github.com/nuxt-community/sitemap-module#sitemap-options
   */
     sitemap: {
+        hostname: "https://www.studioluelu.com.br",
         cacheTime: 10 * 1000 * 60 * 60 * 2,
         trailingSlash: true,
         gzip: true
