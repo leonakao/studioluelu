@@ -10,12 +10,17 @@ export default {
   ** Headers of the page
   */
     head: {
-        titleTemplate: "Studio Lu & Lu",
-        title: process.env.npm_package_name || "",
+        titleTemplate: "%s | Salão de Beleza",
+        title: "Studio Lu & Lu",
+        htmlAttrs: {
+            lang: "pt-br"
+        },
         meta: [
             { charset: "utf-8" },
             { name: "viewport", content: "width=device-width, initial-scale=1" },
-            { hid: "description", name: "description", content: process.env.npm_package_description || "" }
+            { hid: "description", name: "description", content: process.env.npm_package_description || "" },
+            { name: "author", content: "Leonardo Nakao" },
+            { name: "keywords", content: "cabelo, estetica, estética, depilação, tintura, reflexo, coloração, unha, artística, francesinha, peeling, limpeza, pele, corporal, massagem, pé, mão, sobrancelha, maquiagem, make, dia, da, noiva, corte, masculino, feminino, lavar, corrente, russa, drenagem, linfática" }
         ],
         link: [
             { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
