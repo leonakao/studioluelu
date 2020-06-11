@@ -75,10 +75,19 @@
                     max-width="720"
                 >
                     <p>
-                        Somos o Studio Lu & Lu, um espaço destinado a você, a sua vaidade e ao prazer de sentir-se bonita todos os dias!
+                        Somos o <span class="primary--text font-weight-medium">Studio Lu & Lu</span>, um espaço destinado a você, a sua vaidade e ao prazer de sentir-se bonita todos os dias!
                     </p>
                     <p>
-                        Oferecemos tratamento facial de Limpeza de Pele, que tem como objetivo remover impurezas e pode ser feito em todos tipos de pele. E todo mundo sabe o poder de um bom corte de cabelo. Por mais que a gente adore manter os fios bem longos, chega uma hora em que é inevitável: só mesmo diminuindo o comprimento, conseguimos ter um cabelo com saúde e personalidade.
+                        Somos uma equipe treinada e preparada para deixar você ainda mais bonita, seja pelos seus <b>cabelos</b>, pela sua <b>pele</b> ou pelas suas <b>unhas</b>.
+                    </p>
+                    <p>
+                        Proporcionamos o que há de mais moderno no mercado da beleza. Tudo para garantir o seu bem estar e a sua autoestima.
+                    </p>
+                    <p>
+                        Venha nos conhecer, temos um ambiente aconchegante e profissionais treinados para atende-la de forma eficiente e descontraída.
+                    </p>
+                    <p class="font-weight-bold">
+                        Estamos esperando por você!
                     </p>
                 </v-responsive>
             </v-container>
