@@ -54,8 +54,18 @@ export default {
     modules: [
     // Doc: https://axios.nuxtjs.org/usage
         "@nuxtjs/axios",
-        "@nuxtjs/dotenv"
+        "@nuxtjs/dotenv",
+        "@nuxtjs/sitemap"
     ],
+    /*
+  ** Sitemap module configuration
+  ** See https://github.com/nuxt-community/sitemap-module#sitemap-options
+  */
+    sitemap: {
+        cacheTime: 10 * 1000 * 60 * 60 * 2,
+        trailingSlash: true,
+        gzip: true
+    },
     /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
